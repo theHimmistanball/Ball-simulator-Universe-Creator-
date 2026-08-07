@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Simulator Universe Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Starter experience</p>
+        <h1>Ball Simulator Universe Creator</h1>
+        <p class="subtitle">Welcome! Choose how you want to begin your adventure.</p>
+      </header>
+
+      <main class="card" id="welcome-screen">
+        <h2>Are you a new or returning player?</h2>
+        <p>Pick the option that matches you so we can guide you to the right start.</p>
+        <div class="button-row">
+          <button class="primary" data-target="new-player-screen">New player</button>
+          <button class="secondary" data-target="returning-player-screen">Returning player</button>
+        </div>
+      </main>
+
+      <section class="card hidden" id="new-player-screen">
+        <h2>Welcome, new player!</h2>
+        <p>Where do you want to make an account from?</p>
+        <div class="button-row">
+          <button class="primary" data-action="email">Email</button>
+          <button class="secondary" data-action="guest">Guest</button>
+          <button class="secondary" data-action="google">Google</button>
+        </div>
+        <div id="new-player-message" class="message"></div>
+      </section>
+
+      <section class="card hidden" id="email-form-screen">
+        <h2>Create your account</h2>
+        <form id="signup-form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Choose a username" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Create a password" required />
+
+          <button class="primary" type="submit">Create account</button>
+        </form>
+      </section>
+
+      <section class="card hidden" id="returning-player-screen">
+        <h2>Welcome back</h2>
+        <p>Sign in to continue building your universe.</p>
+        <form id="login-form">
+          <label for="login-id">Email or username</label>
+          <input id="login-id" name="login-id" type="text" placeholder="Enter your email or username" required />
+
+          <label for="login-password">Password</label>
+          <input id="login-password" name="login-password" type="password" placeholder="Enter your password" required />
+
+          <button class="primary" type="submit">Log in</button>
+        </form>
+      </section>
+
+      <section class="card hidden" id="success-screen">
+        <h2 id="success-title">You're ready to play!</h2>
+        <p id="success-message">Your starter setup is complete. The next step can be added to the game flow later.</p>
+        <button class="secondary" id="start-over">Start over</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
